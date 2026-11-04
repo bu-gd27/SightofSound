@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --pixel: #242424;
+  --accent: #ff6b4a;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+.coming-soon {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 5vw, 3.25rem);
+  line-height: 1.6;
+  letter-spacing: -0.08em;
+}
+
+.morse-label {
+  margin: 2.8rem 0 1.5rem;
+  color: #777;
+  font-size: clamp(0.55rem, 1.7vw, 0.75rem);
+  line-height: 1.8;
+}
+
+.morse {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 1.05rem;
+  max-width: 42rem;
+  padding: 1rem;
+}
+
+.letter {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+}
+
+.letter i { display: block; background: var(--pixel); }
+.dot { width: 10px; height: 10px; }
+.dash { width: 23px; height: 10px; }
+.word-break { flex-basis: 1.5rem; height: 1px; }
+
+@media (max-width: 420px) {
+  .morse { gap: 1rem 0.7rem; padding: 0.5rem; }
+  .letter { gap: 3px; }
+  .dot { width: 8px; height: 8px; }
+  .dash { width: 18px; height: 8px; }
+}
